@@ -1,0 +1,88 @@
+{
+	"info": {
+		"_postman_id": "b3e4f5a6-1234-4567-8901-abcdef123456",
+		"name": "AI Interview Platform Debug",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Analysis (Resume & JD)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"resume\": \"Software Engineer with 5 years experience in Python, FastAPI, and React. Built scalable microservices.\",\r\n    \"jd\": \"Looking for a Senior Python Developer with experience in Asyncio and Cloud platforms.\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/test-analysis",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"test-analysis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Question Generation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"resume\": \"Software Engineer with 5 years experience in Python, FastAPI, and React. Built scalable microservices.\",\r\n    \"jd\": \"Looking for a Senior Python Developer with experience in Asyncio and Cloud platforms.\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/test-questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"test-questions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
